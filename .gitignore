@@ -1,0 +1,33 @@
+# Build artifacts
+build/
+nimcache/
+*.pbw
+*.bin
+*.elf
+*.o
+*.a
+
+# Waf build system
+.lock-waf*
+.wafpickle-*
+
+# Generated files
+**/src/gen/
+**/src/c/
+**/src/js/pebble-js-app.js
+**/src/js/message_keys.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
