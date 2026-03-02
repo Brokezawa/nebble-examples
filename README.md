@@ -28,33 +28,19 @@ nebble install --emulator basalt
 
 ## 📚 Examples
 
-### Beginner
+These examples demonstrate Nebble-idiomatic Nim patterns for Pebble development. Each example focuses on a specific feature not covered by the ported Pebble SDK examples.
 
-| Example | Description | Concepts |
-|---------|-------------|----------|
-| **hello_world** | Basic app with text layer | App structure, text rendering |
-| **simple_watchface** | Minimal watchface | Time display, watchface basics |
-| **battery_status** | Display battery level | System events, status bar |
-| **vibes_demo** | Vibration patterns | Haptic feedback |
+**For C parity examples**, see the [ported-examples](https://github.com/Brokezawa/ported-examples) repository, which contains official Pebble SDK examples ported to Nim (simple_analog, ks_clock_face, battery display, accelerometer, persistence, etc.).
 
-### Intermediate
-
-| Example | Description | Concepts |
-|---------|-------------|----------|
-| **graphics_demo** | Drawing primitives | Shapes, bitmaps, paths |
-| **menu_demo** | Menu layer usage | Navigation, callbacks |
-| **action_bar_demo** | Action bar patterns | UI controls, icons |
-| **persist_demo** | Data persistence | Storage, settings |
-| **animation_demo** | Property animations | Transitions, tweens |
-
-### Advanced
-
-| Example | Description | Concepts |
-|---------|-------------|----------|
-| **accelerometer_demo** | Motion sensing | Sensors, data processing |
-| **comms_demo** | AppMessage communication | Phone connectivity, serialization |
-| **health_watchface** | Health data display | Activity tracking, permissions |
-| **glance_menu_demo** | App Glance integration | Timeline, menu actions |
+| Example | Type | Description | Key Features |
+|---------|------|-------------|--------------|
+| **hello_world** | App | Minimal entry point | Declarative DSL, text rendering, click handling |
+| **animation_demo** | App | Property animation patterns | AnimationHandle, sequences, event-driven tweens |
+| **comms_demo** | App | Full-stack communication | AppMessage, phone-side Nim (PKJS), typed messaging |
+| **health_watchface** | Watchface | Health data display | Health service, activity metrics, background data |
+| **glance_menu_demo** | App | App Glance + menus | AppGlance API, dynamic menu callbacks, timeline integration |
+| **menu_demo** | App | Menu layer patterns | SimpleMenuLayer, sections, selection handling |
+| **vibes_demo** | App | Haptic feedback | Vibes API, vibration patterns, user interaction |
 
 ## 🏗️ Project Structure
 
@@ -65,8 +51,7 @@ example_name/
 ├── src/
 │   └── example_name.nim       # Main application code
 ├── resources/                  # Images, fonts, etc.
-├── nebble.json                # Nebble configuration
-├── package.json               # Pebble app metadata
+├── package.json               # Pebble SDK app metadata
 ├── wscript                    # Build configuration
 └── nim.cfg                    # Nim compiler settings
 ```

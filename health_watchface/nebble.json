@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "uuid": "deadeade-dead-4ead-bead-deaddeaddec1",
 
-  "platforms": ["aplite", "basalt", "chalk", "diorite", "emery", "flint"],
+  "platforms": ["aplite", "basalt", "chalk", "diorite", "emery", "flint", "gabbro"],
   "capabilities": [],
   "appKeys": {}
 }
