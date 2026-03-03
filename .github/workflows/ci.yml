@@ -77,8 +77,18 @@ jobs:
           
           SUCCESS=0
           FAILED=0
+          SKIPPED=0
           
           for example in "${EXAMPLES[@]}"; do
+            # Check if example supports the target platform
+            if [ -f "$example/package.json" ]; then
+              if ! grep -q "\"${{ matrix.platform }}\"" "$example/package.json"; then
+                echo "⊘ Skipping $example (not supported on ${{ matrix.platform }})"
+                ((SKIPPED++))
+                continue
+              fi
+            fi
+            
             echo "========================================"
             echo "Building $example for ${{ matrix.platform }}"
             echo "========================================"
@@ -98,6 +108,7 @@ jobs:
           echo "========================================"
           echo "Build Results:"
           echo "  Successful: $SUCCESS"
+          echo "  Skipped: $SKIPPED"
           echo "  Failed: $FAILED"
           echo "========================================"
           
