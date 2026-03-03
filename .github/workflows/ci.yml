@@ -127,8 +127,8 @@ jobs:
             echo "Checking $dir..."
             
             # Check for required files
-            if [ ! -f "$dir/nebble.json" ]; then
-              echo "  ✗ Missing nebble.json"
+            if [ ! -f "$dir/package.json" ]; then
+              echo "  ✗ Missing package.json"
               ((ERRORS++))
             fi
             
