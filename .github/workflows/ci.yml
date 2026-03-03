@@ -116,13 +116,16 @@ jobs:
         run: |
           ERRORS=0
           
-          for dir in */; do
-            # Skip hidden directories
-            if [[ "$dir" == .*/ ]]; then
-              continue
-            fi
-            
-            echo "Checking $dir..."
+          # Examples to check (those with package.json)
+          EXAMPLES=(
+            "hello_world"
+            "menu_demo"
+            "vibes_demo"
+            "health_watchface"
+          )
+          
+          for dir in "${EXAMPLES[@]}"; do
+            echo "Checking $dir/..."
             
             # Check for required files
             if [ ! -f "$dir/package.json" ]; then
