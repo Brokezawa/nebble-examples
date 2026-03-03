@@ -70,12 +70,9 @@ jobs:
           # List of examples to build (core examples)
           EXAMPLES=(
             "hello_world"
-            "animation_demo"
             "menu_demo"
             "vibes_demo"
             "health_watchface"
-            "glance_menu_demo"
-            "comms_demo"
           )
           
           SUCCESS=0
