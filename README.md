@@ -1,5 +1,7 @@
 # Nebble Examples
 
+[![CI](https://github.com/Brokezawa/nebble-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/Brokezawa/nebble-examples/actions/workflows/ci.yml)
+
 A collection of example applications and watchfaces demonstrating the [Nebble](https://github.com/Brokezawa/nebble) framework for Pebble smartwatch development.
 
 ## 🚀 Quick Start
